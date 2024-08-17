@@ -10,7 +10,7 @@ async function run() {
 
     const allowedUserIds = allowedIds.split(',');
 
-    const octokit = github.getOctokit(core.getInput('GITHUB_TOKEN'));
+    const octokit = github.getOctokit(core.getInput('token'));
 
     const username = github.context.actor;
 

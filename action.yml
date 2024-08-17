@@ -4,6 +4,9 @@ inputs:
   whitelisted-github-ids:
     description: 'The whitelisted github ids, set as env'
     required: true
+  token:
+    description: 'The GITHUB_TOKEN'
+    required: true
 branding:
   color: "red"
   icon: "lock"
