@@ -1,6 +1,6 @@
 {
   "name": "execute-whitelist-action",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Action to whitelist executions",
   "main": "index.ts",
   "scripts": {
@@ -13,7 +13,7 @@
     "email": "lala@pycord.dev",
     "url": "https://github.com/Lulalaby"
   },
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/Pycord-Development/execute-whitelist-action"
