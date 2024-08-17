@@ -31,7 +31,22 @@ async function run() {
 
     if (allowedUserIds.includes(userId)) {
       core.notice(`${styles.green.open}User ${styles.bold.open}${userId}${styles.bold.close} authorized this workflow run.${styles.green.close}`);
+      core.summary.clear()
+      core.summary.addHeading("Action Authorization");
+      core.summary.addBreak()
+      core.summary.addRaw("This workflow run is authorized by ");
+      core.summary.addLink(`${username} (${userId})`, `https://github.com/${username}`)
+      core.summary.addRaw(".");
+      core.summary.write()
     } else {
+      core.notice(`${styles.green.open}User ${styles.bold.open}${userId}${styles.bold.close} authorized this workflow run.${styles.green.close}`);
+      core.summary.clear()
+      core.summary.addHeading("Action Authorization Failure");
+      core.summary.addBreak()
+      core.summary.addRaw("This workflow run was executed by ");
+      core.summary.addLink(`${username} (${userId})`, `https://github.com/${username}`)
+      core.summary.addRaw(" and is unauthorized!");
+      core.summary.write()
       throw new Error(`User ${styles.bold.open}${userId}${styles.bold.close} is not authorized to run this workflow. Aborting`);
     }
   } catch (error: any) {
