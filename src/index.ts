@@ -10,19 +10,19 @@ async function run() {
 
     const allowedUserIds = allowedIds.split(',');
 
-    core.warning(`First user id: ${allowedUserIds[0]}`)
+    console.log(`First user id: ${allowedUserIds[0]}`)
 
     const octokit = github.getOctokit(core.getInput('token'));
 
     const username = github.context.actor;
 
-    core.warning(`Username: ${username}`)
+    console.log(`Username: ${username}`)
 
     const { data: user } = await octokit.rest.users.getByUsername({
       username: username,
     });
 
-    core.warning(`User id: ${user.id}`)
+    console.log(`User id: ${user.id}`)
 
     const userId = user.id.toString();
 
