@@ -29232,23 +29232,31 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(9190));
 const github = __importStar(__nccwpck_require__(2145));
-try {
-    const allowedIds = core.getInput('whitelisted-github-ids');
-    if (allowedIds === undefined || allowedIds === "") {
-        throw new Error("Input 'whitelisted-github-ids' was empty.");
+async function run() {
+    try {
+        const allowedIds = core.getInput('whitelisted-github-ids');
+        if (allowedIds === undefined || allowedIds === "") {
+            throw new Error("Input 'whitelisted-github-ids' was empty.");
+        }
+        const allowedUserIds = allowedIds.split(',');
+        const octokit = github.getOctokit(core.getInput('token'));
+        const username = github.context.actor;
+        const { data: user } = await octokit.rest.users.getByUsername({
+            username: username,
+        });
+        const userId = user.id.toString();
+        if (allowedUserIds.includes(userId)) {
+            console.log(`User ${userId} is allowed to run this workflow.`);
+        }
+        else {
+            throw new Error(`User ${userId} is not authorized to run this workflow.`);
+        }
     }
-    const allowedUserIds = allowedIds.split(',');
-    const userId = github.context.actor;
-    if (allowedUserIds.includes(userId)) {
-        console.log(`User ${userId} is allowed to run this workflow.`);
-    }
-    else {
-        throw new Error(`User ${userId} is not authorized to run this workflow.`);
+    catch (error) {
+        core.setFailed(error.message);
     }
 }
-catch (error) {
-    core.setFailed(error.message);
-}
+run();
 
 
 /***/ }),
