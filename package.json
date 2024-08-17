@@ -38,6 +38,7 @@
     "@actions/languageservice": "0.3.12",
     "@actions/tool-cache": "2.0.1",
     "@actions/workflow-parser": "0.3.12",
+    "@octokit/webhooks-definitions": "3.68.1",
     "ansi-styles": "6.2.1"
   }
 }
