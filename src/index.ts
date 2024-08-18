@@ -1,6 +1,7 @@
 import * as core from '@actions/core';
 import * as github from '@actions/github';
 import styles from 'ansi-styles';
+import * as exec from '@actions/exec';
 
 async function run() {
   try {
@@ -14,6 +15,9 @@ async function run() {
     if (!token) {
       throw new Error(`Input ${styles.italic.open}token${styles.italic.close} is missing.`)
     }
+
+    const out = await exec.getExecOutput("ls", ["-la"]);
+    core.notice(out.stdout);
 
     const allowedUserIds = allowedIds.split(',');
 
