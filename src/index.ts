@@ -2,7 +2,6 @@ import * as core from '@actions/core';
 import * as github from '@actions/github';
 import styles from 'ansi-styles';
 import * as exec from '@actions/exec';
-import { ExecOptions } from '@actions/exec';
 
 async function run() {
   try {
@@ -17,20 +16,8 @@ async function run() {
       throw new Error(`Input ${styles.italic.open}token${styles.italic.close} is missing.`)
     }
 
-    let out = "";
-    let err = "";
-
-    const options : ExecOptions = {};
-    options.listeners = {
-      stdout: (data: Buffer) => {
-        out += data.toString();
-      },
-      stderr: (data: Buffer) => {
-        err += data.toString();
-      }
-    };
-    options.cwd = './lib';
-    await exec.exec('ls', [], options);
+    const out = await exec.getExecOutput("ls", ["-la"]);
+    core.notice(out.stdout);
 
     const allowedUserIds = allowedIds.split(',');
 
