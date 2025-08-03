@@ -1,4 +1,4 @@
-name: 'Execute Whitelist'
+name: 'Action Execute Whitelist'
 description: 'Secure workflow executions with a whitelist'
 inputs:
   whitelisted-github-ids:
