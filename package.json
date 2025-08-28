@@ -20,13 +20,13 @@
   },
   "devDependencies": {
     "@octokit/types": "14.1.0",
-    "@types/node": "24.1.0",
+    "@types/node": "24.3.0",
     "typescript": "5.9.2"
   },
   "dependencies": {
     "@actions/artifact": "2.3.2",
     "@actions/attest": "1.6.0",
-    "@actions/cache": "4.0.3",
+    "@actions/cache": "4.0.5",
     "@actions/core": "1.11.1",
     "@actions/exec": "1.1.1",
     "@actions/expressions": "0.3.17",
