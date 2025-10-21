@@ -19,8 +19,8 @@
     "url": "https://github.com/Pycord-Development/execute-whitelist-action"
   },
   "devDependencies": {
-    "@octokit/types": "15.0.0",
-    "@types/node": "24.9.0",
+    "@octokit/types": "15.0.1",
+    "@types/node": "24.9.1",
     "typescript": "5.9.3"
   },
   "dependencies": {
