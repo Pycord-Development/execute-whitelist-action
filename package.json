@@ -24,8 +24,8 @@
     "typescript": "5.9.3"
   },
   "dependencies": {
-    "@actions/artifact": "2.3.2",
-    "@actions/attest": "1.6.0",
+    "@actions/artifact": "4.0.0",
+    "@actions/attest": "2.0.0",
     "@actions/cache": "4.1.0",
     "@actions/core": "1.11.1",
     "@actions/exec": "1.1.1",
