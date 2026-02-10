@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@octokit/types": "16.0.0",
-    "@types/node": "24.10.12",
+    "@types/node": "24.10.13",
     "typescript": "5.9.3"
   },
   "dependencies": {
