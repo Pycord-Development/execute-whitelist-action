@@ -20,24 +20,24 @@
   },
   "devDependencies": {
     "@octokit/types": "16.0.0",
-    "@types/node": "24.10.13",
+    "@types/node": "24.11.0",
     "typescript": "5.9.3"
   },
   "dependencies": {
-    "@actions/artifact": "6.1.0",
-    "@actions/attest": "3.0.0",
+    "@actions/artifact": "6.2.0",
+    "@actions/attest": "3.2.0",
     "@actions/cache": "6.0.0",
     "@actions/core": "3.0.0",
     "@actions/exec": "3.0.0",
-    "@actions/expressions": "0.3.44",
+    "@actions/expressions": "0.3.46",
     "@actions/github": "9.0.0",
     "@actions/glob": "0.6.1",
     "@actions/http-client": "4.0.0",
     "@actions/io": "3.0.2",
-    "@actions/languageserver": "0.3.44",
-    "@actions/languageservice": "0.3.44",
+    "@actions/languageserver": "0.3.46",
+    "@actions/languageservice": "0.3.46",
     "@actions/tool-cache": "4.0.0",
-    "@actions/workflow-parser": "0.3.44",
+    "@actions/workflow-parser": "0.3.46",
     "@octokit/webhooks-definitions": "3.68.1",
     "ansi-styles": "6.2.3"
   }
