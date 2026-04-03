@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@octokit/types": "16.0.0",
-    "@types/node": "24.12.0",
+    "@types/node": "24.12.2",
     "typescript": "5.9.3"
   },
   "dependencies": {
@@ -29,15 +29,15 @@
     "@actions/cache": "6.0.0",
     "@actions/core": "3.0.0",
     "@actions/exec": "3.0.0",
-    "@actions/expressions": "0.3.47",
+    "@actions/expressions": "0.3.50",
     "@actions/github": "9.0.0",
     "@actions/glob": "0.6.1",
     "@actions/http-client": "4.0.0",
     "@actions/io": "3.0.2",
-    "@actions/languageserver": "0.3.47",
-    "@actions/languageservice": "0.3.47",
+    "@actions/languageserver": "0.3.50",
+    "@actions/languageservice": "0.3.50",
     "@actions/tool-cache": "4.0.0",
-    "@actions/workflow-parser": "0.3.47",
+    "@actions/workflow-parser": "0.3.50",
     "@octokit/webhooks-definitions": "3.68.1",
     "ansi-styles": "6.2.3"
   }
