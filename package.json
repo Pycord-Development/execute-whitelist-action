@@ -21,7 +21,7 @@
   "devDependencies": {
     "@octokit/types": "16.0.0",
     "@types/node": "24.12.4",
-    "typescript": "6.0.3"
+    "typescript": "7.0.2"
   },
   "dependencies": {
     "@actions/artifact": "6.2.1",
@@ -39,6 +39,6 @@
     "@actions/tool-cache": "4.0.0",
     "@actions/workflow-parser": "0.3.57",
     "@octokit/webhooks-definitions": "3.68.1",
-    "ansi-styles": "6.2.3"
+    "ansi-styles": "7.0.0"
   }
 }
