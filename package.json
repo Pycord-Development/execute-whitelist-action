@@ -1,6 +1,6 @@
 {
   "name": "execute-whitelist-action",
-  "version": "2.0.0",
+  "version": "2.3.0",
   "description": "Action to whitelist executions",
   "main": "index.ts",
   "scripts": {
